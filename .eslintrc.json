@@ -13,9 +13,20 @@
         "quotes":"off",
         "react/jsx-filename-extension":["error",{"extensions":[".js",".jsx",".ts",".tsx"]}],
         "no-unused-vars":"warn",
-        "no-use-before-define":"off"
-        // "react/jsx-indent":["error",4]
-        // "indent":["error",4]
+        "no-use-before-define":"off",
+        "react/jsx-indent":"off",
+        "indent":"off",
+        "arrow-body-style":"off",
+        "import/extensions":["error","never",{"svg":"always"}]
+    },
+    "settings": {
+        "import/resolver":{
+            "alias":{
+                "map":[
+                    ["pages","./src/pages"]
+                ],
+                "extensions":[".ts",".tsx",".js",".jsx",".json",".d.ts"]
+            }
+        }
     }
-
 }

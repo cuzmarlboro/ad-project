@@ -1,16 +1,28 @@
 import React, { Component } from "react";
+import { RouteComponentProps } from "react-router-dom";
 import "./style.scss";
 
-interface Props {
+interface Props extends RouteComponentProps { }
 
-}
+class App extends Component<Props> {
+  handleRoute = () => {
+    const { location, history } = this.props;
+    const { pathname } = location;
+    // 自动去首页
+    if (pathname === '/') {
+      history.push('index');
+      return false;
+    }
+    return true;
+  }
 
-class App extends Component<Props>{
   render() {
+    const { children } = this.props;
     return (
-      <div className="box">
-        App
-        <span>hhhhhh</span>
+      <div>
+        {
+          this.handleRoute() ? children : 'other'
+        }
       </div>
     );
   }

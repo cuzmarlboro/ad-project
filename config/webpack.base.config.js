@@ -11,6 +11,9 @@ const webpackBaseConfig = {
   resolve: {
     // 主要用于文件解析（引入文件时省略扩展名）
     extensions: [".js", ".jsx", ".ts", ".tsx"],
+    alias: {
+      pages: path.join(__dirname, "../src/pages"),
+    },
   },
   module: {
     rules: [
