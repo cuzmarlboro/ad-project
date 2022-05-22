@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 // 开发环境 webpack 配置文件
 
 const path = require("path");

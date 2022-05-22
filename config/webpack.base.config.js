@@ -10,13 +10,17 @@ const webpackBaseConfig = {
   },
   resolve: {
     // 主要用于文件解析（引入文件时省略扩展名）
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   module: {
     rules: [
       {
         test: /\.js[x]/,
         use: "babel-loader",
+      },
+      {
+        test: /\.ts[x]/,
+        use: "ts-loader",
       },
       {
         test: /\.(sc|c)ss/,
