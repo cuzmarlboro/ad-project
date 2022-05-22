@@ -1,0 +1,13 @@
+{
+    "env": {
+        "browser": true
+    },
+    "extends":["airbnb"],
+    "rules": {
+        "react/prefer-stateless-function":"off",
+        "quotes":"off"
+        // "react/jsx-indent":["error",4]
+        // "indent":["error",4]
+    }
+
+}
